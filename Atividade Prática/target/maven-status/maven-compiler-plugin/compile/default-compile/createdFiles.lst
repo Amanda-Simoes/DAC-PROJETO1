@@ -1,0 +1,6 @@
+br/edu/ifpb/web/jsf/ControladorDeInformacoes.class
+br/edu/ifpb/domain/CPF.class
+br/edu/ifpb/infra/jsf/converter/ConverterCPF.class
+br/edu/ifpb/infra/jsf/validator/ValidatorCPF.class
+br/edu/ifpb/domain/Banda.class
+br/edu/ifpb/domain/Integrante.class
