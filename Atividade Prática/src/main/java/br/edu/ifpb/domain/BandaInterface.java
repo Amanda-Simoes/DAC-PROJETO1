@@ -22,6 +22,6 @@ public interface BandaInterface extends Serializable{
     
     public void deleteBanda (Banda banda);
     
-    public Banda searchBanda(String localDeOrigem);
+    public List<Banda> searchBanda(String localDeOrigem);
     
 }
