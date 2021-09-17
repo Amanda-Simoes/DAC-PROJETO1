@@ -1,0 +1,19 @@
+version: "3.3"
+services:
+    banco:
+        container_name: banco
+        image: amandamichel/banco
+        build: ./database
+        ports:
+            - "5433:5432"
+    
+    app:
+        container_name: app
+        image: amandamichel/app
+        build: .
+        ports:
+            - "8081:8080"
+        depends_on:
+            - "banco"
+        links:
+            - "banco:host-banco"

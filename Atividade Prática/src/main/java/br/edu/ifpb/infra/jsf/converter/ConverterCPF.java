@@ -7,9 +7,7 @@ import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 
 /**
- * @author Ricardo Job
- * @mail ricardo.job@ifpb.edu.br
- * @since 06/07/2021, 08:48:19
+ * @author mandy
  */
 
 @FacesConverter(value = "converter.cpf", forClass = CPF.class)

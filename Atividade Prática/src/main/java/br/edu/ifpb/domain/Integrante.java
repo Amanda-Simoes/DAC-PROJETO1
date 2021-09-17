@@ -30,6 +30,14 @@ public class Integrante {
     public Integrante(int id, String nome, LocalDate dataDeNascimento, CPF cpf) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public Integrante(String integrante_Não_encontrado_tente_novamente) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Integrante(String string, CPF cpf, LocalDate of) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public int getId() {
         return id;
