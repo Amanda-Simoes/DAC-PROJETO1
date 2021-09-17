@@ -28,7 +28,7 @@ public class CPF {
         );
     }
 
-    public String valor() {
+    public String getNumero() {
         return this.numero;
     }
 }

@@ -26,7 +26,7 @@ public class ConverterCPF implements Converter{
     public String getAsString(FacesContext context,UIComponent component,Object value) {
         if(value == null) return null;
         CPF cpf = (CPF) value;
-        return cpf.valor();
+        return cpf.getNumero();
     }
 
 }

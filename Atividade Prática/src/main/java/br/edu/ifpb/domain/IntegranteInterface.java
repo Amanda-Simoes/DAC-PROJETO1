@@ -22,6 +22,6 @@ public interface IntegranteInterface extends Serializable{
     
     public void deleteIntegrante (Integrante integrante);
     
-    public void searchIntegrante (String cpf);
+    public Integrante searchIntegrante (String cpf);
     
 }

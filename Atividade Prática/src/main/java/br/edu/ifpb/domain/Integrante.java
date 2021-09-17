@@ -26,6 +26,10 @@ public class Integrante {
         this.dataDeNascimento = dataDeNascimento;
         this.cpf = new CPF (cpf);
     }
+
+    public Integrante(int id, String nome, LocalDate dataDeNascimento, CPF cpf) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public int getId() {
         return id;

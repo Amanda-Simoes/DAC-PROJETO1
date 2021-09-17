@@ -27,6 +27,10 @@ public class BandaJDBC{
     
     private Connection connection;
     
+    /**
+     * Conexão com o banco
+     * @throws SQLException 
+     */
     public BandaJDBC() throws SQLException{
         
         try{
@@ -135,7 +139,6 @@ public class BandaJDBC{
             
             return banda;
         } catch (SQLException e){
-            Logger.getLogger(BandaJDBC.class.getName()).log(Level.SEVERE, null, e);
             return Collections.EMPTY_LIST;
         }
         
