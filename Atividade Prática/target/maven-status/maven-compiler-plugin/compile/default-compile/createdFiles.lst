@@ -1,6 +1,12 @@
-br/edu/ifpb/web/jsf/ControladorDeInformacoes.class
 br/edu/ifpb/domain/CPF.class
 br/edu/ifpb/infra/jsf/converter/ConverterCPF.class
 br/edu/ifpb/infra/jsf/validator/ValidatorCPF.class
-br/edu/ifpb/domain/Banda.class
 br/edu/ifpb/domain/Integrante.class
+br/edu/ifpb/web/jsp/IntegranteController.class
+br/edu/ifpb/domain/IntegranteInterface.class
+br/edu/ifpb/web/jsf/ControladorDeInformacoes.class
+br/edu/ifpb/web/jsp/BandaController.class
+br/edu/ifpb/domain/BandaInterface.class
+br/edu/ifpb/domain/Banda.class
+br/edu/ifpb/domain/persistencyJDBC/IntegranteJDBC.class
+br/edu/ifpb/domain/persistencyJDBC/BandaJDBC.class

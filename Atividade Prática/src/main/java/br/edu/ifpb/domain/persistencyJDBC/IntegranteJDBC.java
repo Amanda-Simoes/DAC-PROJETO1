@@ -146,7 +146,7 @@ public class IntegranteJDBC {
             
                          
         } catch (SQLException e) {
-            return new Integrante("", new CPF(""), LocalDate.of(1, 1, 1));
+            return new Integrante();
         }
          
      }

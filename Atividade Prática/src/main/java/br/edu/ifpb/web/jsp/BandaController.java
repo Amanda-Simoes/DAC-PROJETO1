@@ -36,6 +36,29 @@ public class BandaController implements Serializable{
     public BandaController() throws SQLException {
         this.bandas = (BandaInterface) new BandaJDBC();
     }
+
+    /**
+     * Getter e setter
+     * @return 
+     */
+    public Banda getBanda() {
+        return banda;
+    }
+    public void setBanda(Banda banda) {
+        this.banda = banda;
+    }
+    public List<Banda> getResultBandas() {
+        return resultBandas;
+    }
+    public void setResultBandas(List<Banda> resultBandas) {
+        this.resultBandas = resultBandas;
+    }
+    public BandaInterface getBandas() {
+        return bandas;
+    }
+    public void setBandas(BandaInterface bandas) {
+        this.bandas = bandas;
+    }
     
     /**
      * Adicionar banda
@@ -44,7 +67,7 @@ public class BandaController implements Serializable{
     public String add() { 
         this.bandas.addBanda(banda);
         this.banda = new Banda();
-        return "/Banda/list?faces-redirect=true";
+        return "/bandas/list?faces-redirect=true";
     }
     
     /**
@@ -54,7 +77,7 @@ public class BandaController implements Serializable{
      */
     public String delete(Banda banda){
         this.bandas.deleteBanda(banda);
-        return "/Banda/list";
+        return "/bandas/list";
     }
     
     /**
@@ -64,13 +87,13 @@ public class BandaController implements Serializable{
      */
     public String update(Banda banda){
         this.banda = banda;
-        return "/Banda/edit?faces-redirect=true";
+        return "/bandas/edit?faces-redirect=true";
     }
     
     public String search(){
         this.resultBandas = this.bandas.searchBanda(this.banda.getLocalDeOrigem());
         this.banda = new Banda();
-        return "/Banda/search";
+        return "/bandas/search";
     }
     
 }
