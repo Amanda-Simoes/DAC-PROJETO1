@@ -1,12 +1,13 @@
 /home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/web/jsf/ControladorDeInformacoes.java
-/home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/domain/persistencyJDBC/IntegranteJDBC.java
-/home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/domain/persistencyJDBC/BandaJDBC.java
 /home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/web/jsp/IntegranteController.java
 /home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/domain/IntegranteInterface.java
-/home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/domain/BandaInterface.java
 /home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/infra/jsf/validator/ValidatorCPF.java
 /home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/infra/jsf/converter/ConverterCPF.java
+/home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/infra/jsf/converter/ConverterData.java
+/home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/domain/CPF.java
+/home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/domain/persistencyJDBC/IntegranteJDBC.java
+/home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/domain/persistencyJDBC/BandaJDBC.java
+/home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/domain/BandaInterface.java
 /home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/domain/Banda.java
 /home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/web/jsp/BandaController.java
 /home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/domain/Integrante.java
-/home/mandy/Documentos/Faculdade/D.A.C./DAC-PROJETO1/Atividade Prática/src/main/java/br/edu/ifpb/domain/CPF.java

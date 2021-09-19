@@ -11,6 +11,7 @@ import br.edu.ifpb.domain.IntegranteInterface;
 import br.edu.ifpb.domain.persistencyJDBC.IntegranteJDBC;
 import java.io.Serializable;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
@@ -24,8 +25,9 @@ import javax.inject.Named;
 public class IntegranteController implements Serializable{
     
     private String resultIntegrante = "";
-    private Integrante integrante = new Integrante();
+    private Integrante integrante = new Integrante("", LocalDate.of(1,1, 1), new CPF(""));
     private IntegranteInterface integrantes;
+    
     
     /**
      * Construtor
@@ -64,7 +66,7 @@ public class IntegranteController implements Serializable{
      */
     public String add(){
         this.integrantes.addIntegrante(this.integrante);
-        this.integrante = new Integrante();
+        this.integrante = new Integrante("", LocalDate.of(1,1,1), new CPF(""));
         return "/integrantes/list?faces-redirect=true";
     }
     

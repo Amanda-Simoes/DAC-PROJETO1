@@ -85,10 +85,11 @@ public class IntegranteJDBC implements IntegranteInterface {
     public void addIntegrante(Integrante integrante) {
         
         try{
-            PreparedStatement statement = connection.prepareStatement("INSERT INTO integrante (Nome, CPF, dataDeNascimento) VALUES(?,?,?)");
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO integrante (Nome, dataDeNascimento, CPF) VALUES(?,?,?)");
             statement.setString(1, integrante.getNome());
-            statement.setString(2,integrante.getCpf().getNumero());
-            statement.setDate(3, java.sql.Date.valueOf(integrante.getDataDeNascimento()));
+            statement.setDate(2, java.sql.Date.valueOf(integrante.getDataDeNascimento()));
+            statement.setString(3, integrante.getCpf().getNumero());
+            
             statement.executeQuery();
         } catch (SQLException e) {
             Logger.getLogger(IntegranteJDBC.class.getName()).log(Level.SEVERE,null,e);

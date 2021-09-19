@@ -33,6 +33,10 @@
                     <f:facet name="header">CPF</f:facet>
                     #{integrante.cpf.numero}
                 </h:column>
+                
+                <h:column>
+                    <h:commandButton value="editar" action="#{integranteController.update(integrante)}" class="btn" />
+                </h:column>
             
             </h:dataTable>                      
         </h:form>    

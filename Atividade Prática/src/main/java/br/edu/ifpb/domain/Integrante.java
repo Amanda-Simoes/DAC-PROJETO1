@@ -27,8 +27,14 @@ public class Integrante {
         this.cpf = new CPF (cpf);
     }
 
+    public Integrante(String nome, LocalDate dataDeNascimento, CPF cpf) {
+        this.nome = nome;
+        this.dataDeNascimento = dataDeNascimento;
+        this.cpf = cpf; 
+        
+    }
+    
     public Integrante(int id, String nome, LocalDate dataDeNascimento, CPF cpf) {
-     
         this.id = id;
         this.nome = nome;
         this.dataDeNascimento = dataDeNascimento;
@@ -37,10 +43,6 @@ public class Integrante {
     }
 
     public Integrante(String integrante_Não_encontrado_tente_novamente) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Integrante(String string, CPF cpf, LocalDate of) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
