@@ -90,6 +90,10 @@ public class BandaController implements Serializable{
         return "/bandas/edit?faces-redirect=true";
     }
     
+    /**
+     * Pesquisar banda por local de origem
+     * @return 
+     */
     public String search(){
         this.resultBandas = this.bandas.searchBanda(this.banda.getLocalDeOrigem());
         this.banda = new Banda();

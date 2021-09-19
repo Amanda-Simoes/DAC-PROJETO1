@@ -1,13 +1,62 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Template</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link rel="stylesheet" type="text/css" href="/default.css" media="screen" />
-<link rel="icon" type="image/png" href="/favicon.png" />
-</head>
-<body>
-</body>
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>Atividade 1</title>
+
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <h:outputStylesheet library="css" name="materialize.css" />
+        <h:outputStylesheet library="css" name="materialize.min.css"/>
+        
+        <title>Atividade 1</title>
+    </h:head>
+    <h:body>
+     
+         <nav class="light-blue lighten-1" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="/app/faces/template.xhtml" class="brand-logo">Atividade 1</a>
+                <ul class="right hide-on-med-and-down">
+                    <!-- <li><a href="/app/faces/Integrantes/edit.xhtml">Adicionar Integrante</a></li> -->
+                    <li><a href="/app/faces/Integrantes/list.xhtml">Lista de Integrantes</a></li>
+                    <!-- <li><a href="/app/faces/Integrantes/search.xhtml">Buscar Integrante</a></li>
+                    <li><a href="/app/faces/Banda/edit.xhtml">Adicionar Banda</a></li>
+                    <li><a href="/app/faces/Banda/list.xhtml">Lista de Bandas</a></li>
+                    <li><a href="/app/faces/Banda/search.xhtml">Buscar Banda</a></li> -->
+                </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="#">Navbar Link</a></li>
+              </ul>
+              <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+        
+            <div class="section no-pad-bot" id="index-banner">
+                <div class="container">
+                      <ui:insert name="center">
+                            <br/><br/>
+                            <h1 class="header center orange-text">Atividade 1</h1>
+                            <div class="row center">
+                              <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+                            </div>
+                            <br/><br/>
+
+                      </ui:insert>
+                </div>
+            </div>
+                   
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <h:outputScript library="js" name="materialize.js" />
+  <h:outputScript  library="js" name="materialize.min.js"/>
+        
+        
+    </h:body>
+    
 </html>

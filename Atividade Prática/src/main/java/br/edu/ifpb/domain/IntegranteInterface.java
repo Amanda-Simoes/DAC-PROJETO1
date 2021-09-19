@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface IntegranteInterface extends Serializable{
     
-    public List<Integrante> listaIntegrante();
+    public List<Integrante> listaIntegrantes();
     
     public void addIntegrante (Integrante integrante);
     

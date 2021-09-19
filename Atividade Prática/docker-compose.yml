@@ -2,14 +2,14 @@ version: "3.3"
 services:
     banco:
         container_name: banco
-        image: amandamichel/banco
+        image: amandamichel/banco:1
         build: ./database
         ports:
             - "5433:5432"
     
     app:
         container_name: app
-        image: amandamichel/app
+        image: amandamichel/app:1
         build: .
         ports:
             - "8081:8080"

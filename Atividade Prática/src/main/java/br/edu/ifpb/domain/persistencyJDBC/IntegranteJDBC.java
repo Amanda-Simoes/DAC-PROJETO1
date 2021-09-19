@@ -42,25 +42,30 @@ public class IntegranteJDBC {
                     "123"
             );
         } catch (ClassNotFoundException | SQLException e){
-            Logger.getLogger(BandaJDBC.class.getName()).log(Level.SEVERE,null,e);
+            Logger.getLogger(IntegranteJDBC.class.getName()).log(Level.SEVERE,null,e);
             
         }
         
     }
     
-    public List<Integrante> listaIntegrante() throws SQLException{
+    public List<Integrante> listaIntegrantes() throws SQLException{
         
         try{
-            ResultSet resultIntegrante = connection.prepareStatement("SELECT * FROM Integrante").executeQuery();
             
             List<Integrante> integrante = new ArrayList<>();
             
+            ResultSet resultIntegrante = connection.prepareStatement("SELECT * FROM integrante").executeQuery();
+            
+            Logger.getLogger("Chegou aqui");
+            
             while(resultIntegrante.next()){
                 integrante.add(integranteGuia(resultIntegrante));
-            }
             
+                Logger.getLogger("Entrou no while");
+            }
             return integrante;
         } catch (SQLException e) {
+                Logger.getLogger("Deu erro").log(Level.SEVERE,null,e);
             return Collections.EMPTY_LIST;
         }
         

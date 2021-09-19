@@ -10,6 +10,7 @@ import br.edu.ifpb.domain.Integrante;
 import br.edu.ifpb.domain.IntegranteInterface;
 import br.edu.ifpb.domain.persistencyJDBC.IntegranteJDBC;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  *
@@ -82,6 +83,10 @@ public class IntegranteController {
         return "/integrantes/edit?faces-redirect=true";
     }
     
+    /**
+     * Pesquisar integrante pelo seu CPF
+     * @return 
+     */
     public String search (){
         Integrante resultInt = this.integrantes.searchIntegrante(this.integrante.getCpf().getNumero());
         if(resultInt.getNome().equals("Integrante Não encontrado, tente novamente")){
@@ -91,6 +96,10 @@ public class IntegranteController {
         }
         this.integrante = new Integrante();
         return "/integrantes/search";
+    }
+    
+    public List<Integrante> listar(){
+        return this.integrantes.listaIntegrantes();
     }
     
 }
