@@ -9,14 +9,19 @@ import br.edu.ifpb.domain.CPF;
 import br.edu.ifpb.domain.Integrante;
 import br.edu.ifpb.domain.IntegranteInterface;
 import br.edu.ifpb.domain.persistencyJDBC.IntegranteJDBC;
+import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.List;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
 
 /**
  *
  * @author mandy
  */
-public class IntegranteController {
+@Named
+@SessionScoped
+public class IntegranteController implements Serializable{
     
     private String resultIntegrante = "";
     private Integrante integrante = new Integrante();
@@ -27,7 +32,7 @@ public class IntegranteController {
      * @throws SQLException 
      */
     public IntegranteController() throws SQLException {
-        this.integrantes = (IntegranteInterface) new IntegranteJDBC();
+        this.integrantes = new IntegranteJDBC();
     }
 
     /**

@@ -7,6 +7,7 @@ package br.edu.ifpb.domain.persistencyJDBC;
 
 import br.edu.ifpb.domain.CPF;
 import br.edu.ifpb.domain.Integrante;
+import br.edu.ifpb.domain.IntegranteInterface;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -23,7 +24,7 @@ import java.util.logging.Logger;
  *
  * @author mandy
  */
-public class IntegranteJDBC {
+public class IntegranteJDBC implements IntegranteInterface {
     
     private Connection connection;
     
@@ -48,13 +49,17 @@ public class IntegranteJDBC {
         
     }
     
-    public List<Integrante> listaIntegrantes() throws SQLException{
+    @Override
+    public List<Integrante> listaIntegrantes() {
         
         try{
             
             List<Integrante> integrante = new ArrayList<>();
             
-            ResultSet resultIntegrante = connection.prepareStatement("SELECT * FROM integrante").executeQuery();
+            ResultSet resultIntegrante = connection
+                    .prepareStatement(
+                            "SELECT * FROM integrante"
+                    ).executeQuery();
             
             Logger.getLogger("Chegou aqui");
             
@@ -76,7 +81,8 @@ public class IntegranteJDBC {
      * @param integrante
      * @throws SQLException 
      */
-    public void addIntegrante(Integrante integrante) throws SQLException{
+    @Override
+    public void addIntegrante(Integrante integrante) {
         
         try{
             PreparedStatement statement = connection.prepareStatement("INSERT INTO integrante (Nome, CPF, dataDeNascimento) VALUES(?,?,?)");
@@ -95,7 +101,8 @@ public class IntegranteJDBC {
      * @param integrante
      * @throws SQLException 
      */
-    public void updateIntegrante(Integrante integrante) throws SQLException{
+    @Override
+    public void updateIntegrante(Integrante integrante){
         
         try{
             PreparedStatement statement = connection.prepareStatement("UPDATE integrante SET nome=?, cpf=?, dataDeNascimento=? WHERE id=?");
@@ -115,7 +122,8 @@ public class IntegranteJDBC {
      * @param integrante
      * @throws SQLException 
      */
-    public void deleteIntegrante (Integrante integrante) throws SQLException{
+    @Override
+    public void deleteIntegrante (Integrante integrante){
         
         try{
             PreparedStatement statement = connection.prepareStatement("DELETE FROM integrante WHERE id=?");
@@ -132,6 +140,7 @@ public class IntegranteJDBC {
      * @param cpf
      * @return 
      */
+    @Override
     public Integrante searchIntegrante (String cpf){
          
           try {
@@ -166,8 +175,8 @@ public class IntegranteJDBC {
                 Integer.parseInt(date.substring(5, 7)), 
                 Integer.parseInt(date.substring(8, 10))
         );
-        CPF cpf = new CPF(result.getString("cpf"));
-        return new Integrante(id, nome,dataDeNascimento, cpf);
+        CPF cpf = new CPF(result.getString("cpf")); 
+        return new Integrante(id, nome, dataDeNascimento, cpf);
     }
     
 }

@@ -28,7 +28,12 @@ public class Integrante {
     }
 
     public Integrante(int id, String nome, LocalDate dataDeNascimento, CPF cpf) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+     
+        this.id = id;
+        this.nome = nome;
+        this.dataDeNascimento = dataDeNascimento;
+        this.cpf = cpf; 
+        
     }
 
     public Integrante(String integrante_Não_encontrado_tente_novamente) {
