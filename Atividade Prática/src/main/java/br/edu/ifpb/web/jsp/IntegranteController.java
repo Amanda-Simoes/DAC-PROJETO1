@@ -103,7 +103,7 @@ public class IntegranteController implements Serializable{
         if(resultInt.getNome().equals("Integrante Não encontrado, tente novamente")){
             this.resultIntegrante = resultInt.getNome() +  "não esta cadastrado";
         } else{
-            this.resultIntegrante = "Integrante: " + resultInt.getNome() + "id: " + resultInt.getId() +"CPF:" + resultInt.getCpf() + "Data de Nascimento:" + resultInt.getDataDeNascimento();
+            this.resultIntegrante = "Integrante: " + resultInt.getNome() + " id: " + resultInt.getId() +" CPF:" + resultInt.getCpf().getNumero() + " Data de Nascimento:" + resultInt.getDataDeNascimento();
         }
         this.integrante = new Integrante();
         return "/integrantes/search";
