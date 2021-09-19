@@ -65,7 +65,11 @@ public class BandaController implements Serializable{
      * @return 
      */
     public String add() { 
-        this.bandas.addBanda(banda);
+        if(this.banda.getId() > 0){
+            this.bandas.updateBanda(this.banda);
+        } else{
+            this.bandas.addBanda(banda);
+        }
         this.banda = new Banda();
         return "/bandas/list?faces-redirect=true";
     }
