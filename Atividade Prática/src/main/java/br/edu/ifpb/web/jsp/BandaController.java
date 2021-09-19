@@ -100,4 +100,8 @@ public class BandaController implements Serializable{
         return "/bandas/search";
     }
     
+    public List<Banda> listar(){
+        return this.bandas.listaBanda();
+    }
+    
 }

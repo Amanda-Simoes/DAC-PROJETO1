@@ -8,6 +8,7 @@
  * Created: 18 de set de 2021
  */
 
+
 INSERT INTO integrante(nome, dataDeNascimento, CPF) 
 VALUES ('Amanda',TO_DATE('17-07-2000','DD-MM-YYYY'), '123');
 
@@ -17,3 +18,12 @@ VALUES ('Michel',TO_DATE('16-06-1995','DD-MM-YYYY'), '456');
 INSERT INTO integrante(nome, dataDeNascimento, CPF)
 VALUES ('Pedro',TO_DATE('01-04-2017','DD-MM-YYYY'), '789');
 
+
+INSERT INTO banda(localDeOrigem, nomeFantasia)
+VALUES ('São Paulo','Banda1');
+
+INSERT INTO banda(localDeOrigem, nomeFantasia)
+VALUES ('João Pessoa','Banda2');
+
+INSERT INTO banda(localDeOrigem, nomeFantasia)
+VALUES ('Brasilia','Banda3');

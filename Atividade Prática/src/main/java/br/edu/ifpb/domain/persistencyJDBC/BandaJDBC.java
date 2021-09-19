@@ -23,7 +23,7 @@ import java.util.logging.Logger;
  *
  * @author mandy
  */
-public class BandaJDBC{
+public class BandaJDBC implements BandaInterface{
     
     private Connection connection;
     
@@ -48,7 +48,13 @@ public class BandaJDBC{
         
     }
     
-    public List<Banda> lista() throws SQLException{
+    /**
+     *
+     * @return
+     * @throws SQLException
+     */
+    @Override
+    public List<Banda> listaBanda(){
         
         try{
             

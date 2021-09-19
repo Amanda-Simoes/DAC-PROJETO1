@@ -61,16 +61,11 @@ public class IntegranteJDBC implements IntegranteInterface {
                             "SELECT * FROM integrante"
                     ).executeQuery();
             
-            Logger.getLogger("Chegou aqui");
-            
             while(resultIntegrante.next()){
                 integrante.add(integranteGuia(resultIntegrante));
-            
-                Logger.getLogger("Entrou no while");
             }
             return integrante;
         } catch (SQLException e) {
-                Logger.getLogger("Deu erro").log(Level.SEVERE,null,e);
             return Collections.EMPTY_LIST;
         }
         
