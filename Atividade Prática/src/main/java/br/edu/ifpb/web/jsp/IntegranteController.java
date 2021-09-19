@@ -25,7 +25,7 @@ import javax.inject.Named;
 public class IntegranteController implements Serializable{
     
     private String resultIntegrante = "";
-    private Integrante integrante = new Integrante("", LocalDate.of(1,1, 1), new CPF(""));
+    private Integrante integrante = new Integrante("", LocalDate.of(0000,00,00), new CPF(""));
     private IntegranteInterface integrantes;
     
     
@@ -65,8 +65,12 @@ public class IntegranteController implements Serializable{
      * @return 
      */
     public String add(){
-        this.integrantes.addIntegrante(this.integrante);
-        this.integrante = new Integrante("", LocalDate.of(1,1,1), new CPF(""));
+        if(this.integrante.getId() > 0){
+            this.integrantes.updateIntegrante(this.integrante);
+        } else{
+            this.integrantes.addIntegrante(this.integrante);
+        }
+        this.integrante = new Integrante("", LocalDate.of(0000,00,00), new CPF(""));
         return "/integrantes/list?faces-redirect=true";
     }
     

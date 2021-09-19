@@ -12,21 +12,21 @@
             <h1 class="header center orange-text">Cadastro ou atualização de integrante:</h1>          
             
             <h:outputLabel for="nomeIntegrante" value="Nome:" />
-            <h:inputText id="nomeIntegrante" value="#{IntegranteController.integrante.nome}"/>
+            <h:inputText id="nomeIntegrante" value="#{integranteController.getIntegrante().nome}"/>
             <h:outputLabel for="dataNascimentoIntegrante" value="Data De Nascimento: "/>
             <h:inputText 
                 id="dataNascimentoIntegrante" 
-                value="#{IntegranteController.integrante.dataDeNascimento}"
+                value="#{integranteController.getIntegrante().dataDeNascimento}"
                 converter="converter.data"
                 />
             <h:outputLabel for="cpfIntegrante" value="CPF: "/>
             <h:inputText 
                 id="cpfIntegrante" 
-                value="#{IntegranteController.integrante.cpf}"
+                value="#{integranteController.getIntegrante().cpf}"
                 converter="converter.cpf"
                 validator="validator.cpf"
                 />
-            <h:commandButton value="Salvar" action="#{IntegranteController.add()}" class="btn"/>
+            <h:commandButton value="Salvar" action="#{integranteController.add()}" class="btn"/>
             <br /><br />
             <h:message for="cpfIntegrante" class="red-text"/>
             

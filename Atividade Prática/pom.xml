@@ -5,7 +5,7 @@
     <artifactId>AplicacaoAtv1</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>AplicacaoAtv1</name>
+    <name>app</name>
     
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
