@@ -8,7 +8,7 @@
         
     <ui:define name="center">
             
-        <h1 class="header center orange-text">Busca de Integrantes: </h1>
+        <h1 class="header center black-text">Busca de integrante: </h1>
         <br></br>
         
         <h:form>
@@ -18,9 +18,9 @@
                 value="#{integranteController.integrante.cpf}"
                 converter="converter.cpf"
                 />
-            <h:commandButton value="Buscar" action="#{integranteController.search()}" class="btn" />
+            <h:commandButton value="Buscar" action="#{integranteController.search()}" class="btn black white-text" />
             <br /> <br />
-            <h:outputText value="#{integranteController.resultIntegrante}" class="orange-text"/>
+            <h:outputText value="#{integranteController.resultIntegrante}" class="black-text accent-1"/>
               
             <br /><br />              
         </h:form>

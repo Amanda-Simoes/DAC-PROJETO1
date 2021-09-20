@@ -9,14 +9,14 @@
         
         <h:form>
             
-            <h1 class="header center orange-text">Cadastro ou edição de Bandas </h1>          
+            <h1 class="header center black-text">Banda</h1>          
             
             <h:outputLabel for="nomeFantasia" value="Nome Fantasia:" />
             <h:inputText id="nomeFantasia" value="#{bandaController.getBanda().nomeFantasia}"/>
             <h:outputLabel for="localDeOrigem" value="Local de Origem:"/>
             <h:inputText id="localDeOrigem" value="#{bandaController.getBanda().localDeOrigem}"/>
             
-            <h:commandButton value="Salvar" action="#{bandaController.add()}" class="btn"/>
+            <h:commandButton value="Salvar" action="#{bandaController.add()}" class="btn black white-text"/>
             <br /><br />
             <h:message for="cpfIntegrante" class="red-text"/>
             

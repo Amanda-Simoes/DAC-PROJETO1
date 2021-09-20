@@ -99,8 +99,9 @@ public class BandaController implements Serializable{
      * @return 
      */
     public String search(){
+        
         this.resultBandas = this.bandas.searchBanda(this.banda.getLocalDeOrigem());
-        this.banda = new Banda();
+        this.banda = new Banda("", "", new ArrayList<>());
         return "/bandas/search";
     }
     

@@ -9,7 +9,7 @@
         
         <h:form>
             
-            <h1 class="header center orange-text">Cadastro ou atualização de integrante:</h1>          
+            <h1 class="header center black-text">Integrante</h1>          
             
             <h:outputLabel for="nomeIntegrante" value="Nome:" />
             <h:inputText id="nomeIntegrante" value="#{integranteController.getIntegrante().nome}"/>
@@ -26,7 +26,7 @@
                 converter="converter.cpf"
                 validator="validator.cpf"
                 />
-            <h:commandButton value="Salvar" action="#{integranteController.add()}" class="btn"/>
+            <h:commandButton value="Salvar" action="#{integranteController.add()}" class="btn black white-text"/>
             <br /><br />
             <h:message for="cpfIntegrante" class="red-text"/>
             

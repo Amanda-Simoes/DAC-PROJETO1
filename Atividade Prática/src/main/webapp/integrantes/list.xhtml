@@ -9,7 +9,7 @@
     
     <ui:define name="center"> 
         <h:form>
-            <h:commandLink value="Pesquisa" action="search.xhtml?faces-redirect=true"/>
+            <h:commandLink class="btn black white-text" value="Pesquisar integrante" action="search.xhtml?faces-redirect=true"/>
             <h1 class="header center black-text">Integrantes</h1>
             
             <h:dataTable value="#{integranteController.listar()}" var="integrante" class="striped highlight">
@@ -35,8 +35,9 @@
                 </h:column>
                 
                 <h:column>
-                    <h:commandButton value="editar" action="#{integranteController.update(integrante)}" class="btn" />
-                    <h:commandButton value="excluir" action="#{integranteController.delete(integrante)}" class="btn" />
+                    <h:commandButton value="editar" action="#{integranteController.update(integrante)}" class="btn yellow white-text" />
+                    
+                    <h:commandButton value="excluir" action="#{integranteController.delete(integrante)}" class="btn red white-text" />
                 </h:column>
             
             </h:dataTable>                      

@@ -20,8 +20,7 @@ public class Banda {
     
     public Banda(){}
     
-    public Banda(int id, String localDeOrigem, String nomeFantasia){
-        this.id = id;
+    public Banda(String localDeOrigem, String nomeFantasia, List<Integrante> integrantes){
         this.localDeOrigem = localDeOrigem;
         this.nomeFantasia = nomeFantasia;
         this.integrantes = integrantes;

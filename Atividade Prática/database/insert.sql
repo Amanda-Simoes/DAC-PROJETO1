@@ -10,13 +10,13 @@
 
 
 INSERT INTO integrante(nome, dataDeNascimento, CPF) 
-VALUES ('Amanda',TO_DATE('17-07-2000','DD-MM-YYYY'), '123');
+VALUES ('Amanda',TO_DATE('17-07-2000','DD-MM-YYYY'), '91638348049');
 
 INSERT INTO integrante(nome, dataDeNascimento, CPF)
-VALUES ('Michel',TO_DATE('16-06-1995','DD-MM-YYYY'), '456');
+VALUES ('Michel',TO_DATE('16-06-1995','DD-MM-YYYY'), '33694392041');
 
 INSERT INTO integrante(nome, dataDeNascimento, CPF)
-VALUES ('Pedro',TO_DATE('01-04-2017','DD-MM-YYYY'), '789');
+VALUES ('Pedro',TO_DATE('01-04-2017','DD-MM-YYYY'), '69072638077');
 
 
 INSERT INTO banda(localDeOrigem, nomeFantasia)

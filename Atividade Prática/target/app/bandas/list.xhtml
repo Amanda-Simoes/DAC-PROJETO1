@@ -9,7 +9,7 @@
     
     <ui:define name="center"> 
         <h:form>
-            <h:commandLink value="nova" action="list.xhtml?faces-redirect=true"/>
+            <h:commandLink class="btn black white-text" value="Pesquisar bandas" action="search.xhtml?faces-redirect=true"/>
             <h1 class="header center black-text">Bandas</h1>
             
             <h:dataTable value="#{bandaController.listar()}" var="banda" class="striped highlight">
@@ -36,8 +36,8 @@
 
                 
                 <h:column>
-                    <h:commandButton value="editar" action="#{bandaController.update(banda)}" class="btn" />
-                    <h:commandButton value="excluir" action="#{bandaController.delete(banda)}" class="btn" />
+                    <h:commandButton value="editar" action="#{bandaController.update(banda)}" class="btn yellow white-text" />
+                    <h:commandButton value="excluir" action="#{bandaController.delete(banda)}" class="btn red white-text" />
                 </h:column>
             
             </h:dataTable>                      

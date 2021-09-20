@@ -36,7 +36,14 @@ public class ConverterData implements Converter{
     public String getAsString(FacesContext fc, UIComponent uic, Object t) {
        if (t == null) return null;
        LocalDate dataDeAniversario = (LocalDate) t;
-       return dataDeAniversario.getYear() + "/" + dataDeAniversario.getMonthValue()+ "/" + dataDeAniversario.getDayOfMonth();
+       String barra;
+       if (dataDeAniversario.getMonthValue() >= 10) {
+           barra = "/";
+       } else {
+           barra = "/0";
+       }       
+       
+       return dataDeAniversario.getYear() + barra + dataDeAniversario.getMonthValue()+ "/" + dataDeAniversario.getDayOfMonth();
     }
     
 }

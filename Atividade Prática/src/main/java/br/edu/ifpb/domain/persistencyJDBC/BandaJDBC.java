@@ -132,18 +132,19 @@ public class BandaJDBC implements BandaInterface{
     public List<Banda> searchBanda (String localDeOrigem){
         
         try{
+            
+            List<Banda> bandas = new ArrayList<>();
+            
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM banda WHERE localDeOrigem=?");
             statement.setString(1, localDeOrigem);
             statement.executeQuery();
             
-            List<Banda> banda = new ArrayList<>();
-            
             ResultSet resultBanda = statement.getResultSet();
             while (resultBanda.next()){
-                banda.add(bandaGuia(resultBanda));
+                bandas.add(bandaGuia(resultBanda));
             }
             
-            return banda;
+            return bandas;
         } catch (SQLException e){
             return Collections.EMPTY_LIST;
         }
